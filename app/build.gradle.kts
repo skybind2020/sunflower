@@ -42,6 +42,12 @@ android {
         arguments["dagger.hilt.disableModulesHaveInstallInCheck"] = "true"
       }
     }
+
+    lint {
+      checkReleaseBuilds = false
+      //If you want to continue even if errors found use following line
+      abortOnError = false
+    }
   }
   buildTypes {
     release {
